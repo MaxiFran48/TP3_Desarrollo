@@ -22,7 +22,7 @@ public abstract class Usuario {
     }
 
     public void enviar(String mensaje) {
-        System.out.println(nombre + " envia: " + mensaje);
+        System.out.println("\n" + nombre + " envia: " + mensaje);
         mediator.enviar(mensaje, this);
     }
 

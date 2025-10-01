@@ -1,22 +1,14 @@
-import chainofresponsability.Asistente;
-import chainofresponsability.Coordinador;
-import chainofresponsability.Profesor;
-import chainofresponsability.Solicitud;
+import chainofresponsability.*;
 import command.AbandonarCursoCommand;
 import command.Command;
 import command.InscribirseCursoCommand;
 import command.RemoteControl;
-import iterator.Alumno;
-import iterator.Curso;
-import iterator.CursoIterator;
+import iterator.*;
 import mediator.*;
 import memento.Examen;
 import memento.Historial;
-import observer.AlumnoObserver;
-import observer.CursoObserver;
-import observer.Observer;
+import observer.*;
 import state.Inscripcion;
-import state.Inscripto;
 import strategy.*;
 import templatemethod.ReporteAcademico;
 import templatemethod.ReporteAlumno;
@@ -207,8 +199,8 @@ public class Main {
         // Creamos el alumno
         AlumnoStrategy alumno6 = new AlumnoStrategy(new PromedioSimple());
 
-        // Creamos la lista de notas
-        List<Double> notas = Arrays.asList(8.0, 9.0, 10.0, 9.5, 6.4, 3.8);
+        // Creamos la lista de notas (deben ser 3: parcial 1, parcial 2 y global)
+        List<Double> notas = Arrays.asList(10.0, 9.5, 6.4);
 
         // Calculamos las notas
         alumno6.calcularNota(notas);
